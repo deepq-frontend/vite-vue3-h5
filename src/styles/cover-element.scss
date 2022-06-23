@@ -1,0 +1,29 @@
+.form-group {
+  display: inline-block;
+  .el-form-item {
+    &:first-child {
+      margin-right: 0px !important;
+      .el-input__inner {
+        box-shadow: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    &:last-child .el-input__inner {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.button-group-no-bg {
+  .el-radio-button.is-active {
+    --el-radio-button-checked-text-color: #3058FC;
+    --el-radio-button-checked-bg-color: #ffffff;
+    --el-radio-button-checked-border-color: #3058FC;
+  }
+}
+
+.el-button {
+  min-width: 80px;
+}

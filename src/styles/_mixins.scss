@@ -1,0 +1,33 @@
+/* Mixins */
+@import 'dq-ui/theme-chalk/src/mixins/mixins.scss';
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin showText($number: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number;
+  white-space: normal !important;
+}
+/* 超出隐藏 ... */
+@mixin text-ellipsis($row) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}

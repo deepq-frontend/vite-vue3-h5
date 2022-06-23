@@ -1,0 +1,20 @@
+// @use 'sass:math';
+.rich-text {
+  * {
+    font-size: 30px;
+    // font-weight: 30px !important;
+    font-family: siyuanhei-regular;
+    line-height: #{math.div(56, 30) + em};
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: underline;
+    color: #3058fc;
+  }
+  ol,
+  ul {
+    padding-left: 30px;
+  }
+}
