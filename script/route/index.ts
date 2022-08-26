@@ -11,8 +11,9 @@ program
   .command('gen')
   .description('创建权限路由文件')
   .option('-c, --create', '是否同步创建views')
+  .option('-t, --tree', '是否创建树形目录')
   .action((options: any) => {
-    command.createRouteFile(route, options.create);
+    command.createRouteFile(route, options.create, options.tree);
   });
 
 program

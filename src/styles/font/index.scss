@@ -1,131 +1,93 @@
-@font-face {
-  font-family: dq-number-blod;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Bold.otf');
-}
-@font-face {
-  font-family: dq-number;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Regular.otf');
-}
-@font-face {
-  font-family: dq-number-black;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Black.otf');
-}
+@import './basic.scss';
+
 
 @font-face {
-  font-family: siyuansong-blod;
+  font-family: SourceHanSerifCN-Bold;
+  // src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Bold.otf');
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Bold.otf');
 }
 @font-face {
   font-family: siyuansong-heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Heavy.otf');
 }
 @font-face {
   font-family: siyuansong-medium;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Medium.otf');
 }
 @font-face {
   font-family: siyuansong;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Regular.otf');
 }
 @font-face {
   font-family: alibaba-heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Alibaba-PuHuiTi-Heavy.ttf');
 }
-@font-face {
-  font-family: alibaba-medium;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Alibaba-PuHuiTi-Medium.ttf');
-}
+
 @font-face {
   font-family: siyuanhei-heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSansCN-Heavy.otf');
 }
 @font-face {
   font-family: siyuanhei-regular;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSansCN-Regular.otf');
 }
 @font-face {
-  font-family: jiangcheng-300;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/jiang-cheng-xie-ti300W.ttf');
+  font-family: jiang-xi-zhuo-kai;
+  
+  src: url('//dq-front-deliver.oss-cn-shanghai.aliyuncs.com/front-end-static-assets/font/jiang-xi-zhuo-kai.ttf');
 }
-@font-face {
-  font-family: jiangcheng-500;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/jiang-cheng-xie-ti500W.ttf');
-}
-@font-face {
-  font-family: jiangcheng-700;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/jiang-cheng-xie-ti700W.ttf');
-}
-@font-face {
-  font-family: jiangcheng-900;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/jiang-cheng-xie-ti900W.ttf');
-}
-@font-face {
-  font-family: Barlow-Italic;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Barlow-Italic.ttf');
-}
-@font-face {
-  font-family: xinyiguan-heiti;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/xinyiguanheiti.ttf');
-}
-@font-face {
-  font-family: ruizizhenyan;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/ruizizhenyanti.ttf');
-}
-@font-face {
-  font-family: jiangxizhuokai;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/jiangxizhuokai.ttf');
-}
-
-
 
 // 公共字体
 
-@font-face {
-  font-family: DINPro-Bold;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Bold.otf');
-}
-@font-face {
-  font-family: DINPro-Regular;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Regular.otf');
-}
-@font-face {
-  font-family: DINPro-Black;
-  src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/DINPro-Black.otf');
-}
 
 @font-face {
   font-family: SourceHanSerifCN-Bold;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Bold.otf');
 }
 @font-face {
   font-family: SourceHanSerifCN-Heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Heavy.otf');
 }
 @font-face {
-  font-family: SourceHanSerifCN-Heavy;
+  font-family: SourceHanSerifCN-Medium;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Medium.otf');
 }
 @font-face {
   font-family: SourceHanSerifCN-Regular;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSerifCN-Regular.otf');
 }
 @font-face {
   font-family: Alibaba-PuHuiTi-Heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Alibaba-PuHuiTi-Heavy.ttf');
 }
 @font-face {
   font-family: Alibaba-PuHuiTi-Medium;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Alibaba-PuHuiTi-Medium.ttf');
 }
 @font-face {
   font-family: SourceHanSansCN-Heavy;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSansCN-Heavy.otf');
 }
 @font-face {
   font-family: SourceHanSansCN-Regular;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/SourceHanSansCN-Regular.otf');
 }
 @font-face {
   font-family: Barlow-Italic;
+  
   src: url('//web-st.oss-cn-shanghai.aliyuncs.com/assets/font/Barlow-Italic.ttf');
 }

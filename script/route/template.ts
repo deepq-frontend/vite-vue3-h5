@@ -5,7 +5,7 @@ import { RouteRecordRaw } from 'vue-router'
 export default `,
   VUE: (name: string) => {
     return `<template>
-<div class='${name}'>${name}</div>
+<div class='${name} app-container'>${name}</div>
 </template>
 <script lang='ts' setup>
 defineOptions({

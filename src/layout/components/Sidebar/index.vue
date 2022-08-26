@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'has-logo': showLogo }">
     <sidebar-logo v-if="showLogo" :collapse="isCollapse" />
-    <el-scrollbar wrap-class="scrollbar-wrapper">
+    <el-scrollbar height="100%" wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
         :collapse="isCollapse"
@@ -72,6 +72,7 @@ const activeMenu = computed(() => {
 <style lang="scss">
 .sidebar-container {
   // reset element-ui css
+  background-color: $subMenuBg;
   .horizontal-collapse-transition {
     transition: 0s width ease-in-out, 0s padding-left ease-in-out,
       0s padding-right ease-in-out;
@@ -82,7 +83,7 @@ const activeMenu = computed(() => {
   }
 
   .el-scrollbar__view {
-    height: 100%;
+    min-height: 100%;
   }
 
   .el-scrollbar__bar {
@@ -104,13 +105,13 @@ const activeMenu = computed(() => {
 
 .has-logo {
   .el-scrollbar {
-    height: calc(100% - 50px);
+    height: calc(100% - #{$navbar-height});
   }
 }
 
 .el-menu {
   border: none;
-  height: 100%;
+  min-height: 100%;
   width: 100% !important;
 }
 </style>

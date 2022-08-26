@@ -6,6 +6,7 @@
 // @import './basic.scss';
 @import './cover-element.scss';
 @import 'dq-ui/theme-chalk/src/index.scss';
+@import './swiper.scss';
 @import './font//index.scss';
 @import './rich-text.scss';
 /* Global scss */
@@ -47,10 +48,14 @@ label {
 
 .app-container {
   background-color: #fff;
-  min-height: calc(100% - 140px);
+  // min-height: calc(100% - 140px);
   margin: 40px;
   padding: 24px;
   box-sizing: border-box;
+
+  &.fix-table {
+    height: calc(100vh - 80px - #{$navbar-height});
+  }
 }
 
 .components-container {

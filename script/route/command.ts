@@ -20,6 +20,7 @@ interface IRoute {
   meta?: Record<string, string | string[] | boolean>;
   children?: IRoute[];
   redirect?: string;
+  filePath?: string;
 }
 
 function resolveRoute(item: IRoute) {
@@ -57,26 +58,29 @@ function resolveRouteName(route: IRoute[], nameMap: INameMap) {
 // 加工路由路径
 function resolveRouteComponent(
   routes: IRoute[],
-  map: Record<string, string> = {}
+  map: Record<string, string> = {},
+  parentPath = ''
 ) {
   routes.forEach(el => {
     const { name, component } = el;
+    el.filePath = join(parentPath, name);
     if (name || component) {
-      const componentPath = component || `@/views/${name}/index.vue`;
+      const componentPath = component || `@/views/${el.filePath}/index.vue`;
       map[
         name
       ] = `() => import(/* webpackChunkName: '${name}' */ '${componentPath}')`;
       el.component = `{{${name}}}`;
     }
     if (el.children) {
-      resolveRouteComponent(el.children, map);
+      const temp = join(parentPath, el.name);
+      resolveRouteComponent(el.children, map, temp);
     }
   });
   return map;
 }
 
 // 创建路由配置文件
-function createRouteFile(routes: IRoute[], createFile: boolean) {
+function createRouteFile(routes: IRoute[], createFile: boolean, tree: boolean) {
   const routerPath = join(__dirname, '../../src/router');
   const map = resolveRouteComponent(routes);
   let str = JSON.stringify(routes);
@@ -111,7 +115,8 @@ async function publishRoute(route: IRoute[], option: any) {
 }
 
 function genViewFile(route: IRoute) {
-  const FILE_PATH = join(VIEW_PATH, route.name, 'index.vue');
+  const FILE_PATH = join(VIEW_PATH, route.filePath, 'index.vue');
+  console.log(route.name, '======>', FILE_PATH);
   const res = fs.pathExistsSync(FILE_PATH);
   if (!res) {
     fs.outputFileSync(FILE_PATH, VUE(route.name));

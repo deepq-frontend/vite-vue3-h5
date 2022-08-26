@@ -24,8 +24,7 @@ const cachedViews = computed(() => {
 
 <style lang="scss" scoped>
 .app-main {
-  // min-height: calc(100vh - $navbar-height);
-  min-height: 100vh;
+  min-height: calc(100vh - $navbar-height);
   width: 100%;
   position: relative;
   overflow: hidden;

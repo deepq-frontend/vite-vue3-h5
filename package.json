@@ -86,6 +86,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
     "dq-api-generate": "^1.0.11",
+    "dq-oss-page": "^1.0.3",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^4.0.0",
